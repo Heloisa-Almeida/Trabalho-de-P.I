@@ -1,0 +1,24 @@
+ -- TRANSPORTE
+ 
+create table transporte(
+	id int primary key auto_increment,
+    enderecoOrigem varchar(60),
+    enderecoDestino varchar(60),
+	dtTransporte datetime,
+    statusTransporte boolean,
+    temperatura int,
+    tipoTransporte varchar(30),
+    constraint chkTipoTransporte check(tipoTransporte in ('caminhão', 'fiorino', 'van')),
+    tempoDeslocamento int,
+    tipoDeRefrigeração varchar(60)
+    );
+
+SELECT * FROM transporte;
+insert into transporte values
+	(DEFAULT, 'Rua da sé', 'vila carrao', '2025-05-10 13:01:21', TRUE, '6', 'caminhão', '30', 'caixa termica'),
+	(DEFAULT,'Rua general guine', 'Av brasil 120', '2025-10-11 14:04:10', TRUE, '5', 'fiorino', '60', 'câmeras refrigeradas'),
+	(DEFAULT,'Av. Antonio de carvalho 45', 'Rua alameda jose 28', '2026-01-01 16:10:10', FALSE, '4', 'van', '30', 'baús frigoríficos');
+
+alter table transporte modify column tipoTransporte varchar(20);
+update transporte set enderecoOrigem = 'Rua centro 123' where id = 3;
+select * from transporte where enderecoOrigem like '%c%';
