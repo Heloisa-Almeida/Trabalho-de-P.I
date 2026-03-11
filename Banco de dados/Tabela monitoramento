@@ -1,16 +1,14 @@
--- MONITORAMENTO
+-- MONITORAMENTO 
  
  CREATE TABLE monitoramento (
-idMonitoramento  INT PRIMARY KEY AUTO_INCREMENT,
+id INT PRIMARY KEY AUTO_INCREMENT,
 nomeVacina VARCHAR(50),
 dtTransporte DATE,
-oscilacao VARCHAR(10),
-regiao VARCHAR(30),
-tempVacina VARCHAR(10)
+tempCapturada VARCHAR(10) 
 );
 
-INSERT INTO monitoramento VALUES
-(DEFAULT, 'Hepatite A', '2026-02-01', '4°', 'São Paulo, Zona Leste', '1°'),
-(DEFAULT, 'Tétano', '2026-02-03', '3°', 'Rio de Janeiro, Copacabana', '1°'),
-(DEFAULT, 'Hepatite B', '2026-02-07', '6°', 'Minas Gerais, Ouro Preto', '4°');
+INSERT INTO monitoramento VALUES 
+(DEFAULT, 'Hepatite A', '2026-02-01','1°'),
+(DEFAULT, 'Tétano', '2026-02-03', '1°'),
+(DEFAULT, 'Hepatite B', '2026-02-07', '4°');
 SELECT * FROM monitoramento;
