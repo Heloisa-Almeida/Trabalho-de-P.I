@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <br><br><br>
+    <div class="container">
+        <h1>Calculadora Financeira</h1>
+        <div class="inputs">
+            <div class="ipts1">
+                <div class="ipt1">
+                    <label>Insira o nome da vacina:</label>
+                    <input type="text" id="input_nome">
+                </div>
+                <div class="ipt2">
+                    <label>Insira a quantidade de unidades por lote:</label>
+                    <input type="text" id="input_por_lote">
+                </div>
+            </div>
+            <div class="ipts1">
+                <div class="ipt1">
+                    <label>Insira a quantidade de lotes:</label>
+                    <input type="text" id="input_qtd_lotes">
+                </div>
+                <div class="ipt2">
+                    <label>Insira o preço médio de produção <b>por</b> vacina:</label>
+                    <input type="text" id="input_preco">
+                </div>
+            </div>
+            <div class="ipts1">
+                <div class="ipt1">
+                    <label>Insira a quantidade de viagens realizadas no mês:</label>
+                    <input type="text" id="input_qtd_viagem">
+                </div>
+                <div class="ipt2">
+                    <label>Insira veículo que vai realizar o transporte:</label>
+                    <input type="text" id="input_veiculo">
+                </div>
+            </div>
+        </div>
+        <div class="resultado">
+            <button onclick="calculo()">Calcular</button>
+            <div id="mensagem"></div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
