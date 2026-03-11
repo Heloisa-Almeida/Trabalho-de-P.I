@@ -1,0 +1,22 @@
+-- USUARIO
+ 
+ CREATE TABLE usuario(
+ idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+ tipoUsuario VARCHAR(40),
+ nomeCompleto VARCHAR (100),
+ email VARCHAR(60),
+ cpf VARCHAR(20),
+ senha VARCHAR (30),
+ endereco VARCHAR(40),
+ celular VARCHAR(18)
+ );
+ ALTER TABLE usuario ADD CONSTRAINT chkCargo
+ CHECK(cargo IN ('Administrador', 'Gerente' , 'Usuario'));
+ 
+ alter table usuario rename column tipoUsuario to cargo;
+ 
+ INSERT INTO usuario VALUES
+ (default,'Gerente','Cláudio Frizarini','claudiofrizarini@gmail.com','2740.123.980','Amocachorros123','Rua Guimarães Dos Campos','11894217921'),
+(default,'Administrador','Gabriel Eduardo Santos','gabrieleduardo@gmail.com','3100.439.670','123456789','Rua Vasco da Gama','21354681508'),
+(default,'Administrador','Felipe Leone Gomes','felipeleonegomes@gmail.com','9544-009-126','notebookmedico123','Rua Luis Alvares De Spim','11999584554');
+ 
