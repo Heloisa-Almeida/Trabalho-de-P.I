@@ -1,0 +1,24 @@
+CREATE DATABASE VaccinMonitorate;
+USE VaccinMonitorate;
+
+-- VACINA
+ 
+ CREATE TABLE vacina(
+ idvacina INT PRIMARY KEY AUTO_INCREMENT,
+ nomeVacina VARCHAR(30),
+ temperaturaIdeal INT ,
+ ValorUnitario DECIMAL (4,2),
+ empresaFornecedora VARCHAR(30),
+ lote VARCHAR(30)
+ );
+ 
+ INSERT INTO vacina VALUES 
+ (DEFAULT, 'covid-19' , 2 , 12.50 , 'BUTANTÃ', 'M642'), 
+ (DEFAULT, 'HPV' , 3 , 15.00 , 'BUTANTÃ', 'M642'), 
+ (DEFAULT, 'hepatite A' , 8 , 13.00 , 'BUTANTÃ', 'M640'); 
+ 
+
+ ALTER TABLE vacina ADD CONSTRAINT chktemp
+ CHECK(temperaturaIdeal BETWEEN 2 AND 8);
+ INSERT INTO vacina VALUES 
+ (DEFAULT, 'Pentavalente', 2 ,13.00 ,'BUTANTÃ' , 'M639'); 
