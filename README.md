@@ -18,8 +18,8 @@ Atualmente, existem muitos casos de perdas de vacinas devido à falta de monitor
 ## 💻 Tecnologias Utilizadas:
 - MySQL Workbench (SQL)
 - VSCode (HTML, JavaScript, CSS)
-- Virtual Box (VM)
-- Arduíno
+- Oracle Virtual Box (VM)
+- Arduíno IDE
 - Trello
 - GitHub
 - GitBash
