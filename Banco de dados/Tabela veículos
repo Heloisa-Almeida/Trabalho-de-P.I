@@ -1,0 +1,21 @@
+-- Veiculos
+CREATE TABLE veiculos(
+id INT PRIMARY KEY AUTO_INCREMENT,
+tipoVeiculo varchar(30),
+constraint chktipoVeiculo check(tipoVeiculo in ('Caminhão', 'Fiorino', 'Van')),
+placa CHAR(7),
+marca VARCHAR(20),
+disponivel VARCHAR(12),
+capacidade float,
+CONSTRAINT chkdisponi CHECK(disponivel = 'disponivel' OR disponivel = 'indisponivel')
+);
+DROP TABLE veiculos;
+
+INSERT INTO veiculos VALUES
+(DEFAULT, 'Caminhão', 'CGB8394' , 'Iveco' ,'disponivel' , 300),
+(DEFAULT, 'Fiorino', 'SUD7729' , 'Ducato' ,'disponivel' , 200),
+(DEFAULT, 'Van', 'DDL7289' , 'Doblo' ,'indisponivel' , 150);
+
+SELECT * FROM veiculos;
+UPDATE veiculos SET placa = 'DGY7839' WHERE id = 3 ;
+SELECT concat('O veiculo da placa ' , placa ,' está ' , disponivel) AS Disponibilidade FROM veiculos;
