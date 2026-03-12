@@ -1,0 +1,36 @@
+body {
+    background-color: #233671;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    color: navy;
+}
+C:\Aulas de ALG\Lista 4\l04p3_ex6.html
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+.container {
+    width: 1000px;
+    height: 600px;
+    background-color: #f4f5ff;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ipt1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
